@@ -1,3 +1,40 @@
 body {
-    background: greenyellow;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    padding: 3rem;
+}
+
+/* FLEXBOX */
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+
+
+/* NAV */
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav li {
+    margin-right: 10px;
 }
