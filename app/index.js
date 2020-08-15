@@ -15,6 +15,7 @@ function App () {
       <Router>
         <div className="container">
           <Nav />
+
           <Switch>
             <Route exact path="/">
               <Home />
@@ -30,6 +31,9 @@ function App () {
             </Route>
             <Route path="/contact">
               <Contact />
+            </Route>
+            <Route path="/*">
+                404 Page not found
             </Route>
           </Switch>
         </div>

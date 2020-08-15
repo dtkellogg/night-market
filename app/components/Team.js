@@ -1,8 +1,21 @@
 import React from 'react'
-
+import { members } from '../data.js'
 
 export default function Team() {
     return (
-        <h1>Team</h1>
+        <div>
+            <ul>
+                {members.map(({ name, avatar }) => {
+                    return (
+                        <li key={name}>
+                            {name}
+                            <img src={avatar} />
+                        </li>
+
+                    )
+                }
+                )}
+            </ul>
+        </div>
     )
 }
