@@ -9,13 +9,26 @@ import Home from "./components/Home"
 import Team from "./components/Team"
 import Contact from "./components/Contact"
 import Involved from "./components/Involved"
+import Footer from "./components/Footer"
+import logo from '../img/svg/logo.svg'
+import logoMain from '../img/svg/logo__main.svg'
+import group from '../img/svg/group.svg'
+import logoMain from '../img/svg/partner__dickeys.svg'
+import logoMain from '../img/svg/partner__chickpeas.svg'
+import logoMain from '../img/svg/partner__coop.svg'
+import logoMain from '../img/svg/partner__barista.svg'
+import logoMain from '../img/svg/partner__upperCrust.svg'
 
 function App () {
     return (
       <Router>
-        <div className="container">
-          <Nav />
+        <div className="container__main">
 
+         <img src={logo} className='logo' alt='logo' />
+         <img src={logoMain} className='logo' alt='logo' />
+
+          <Nav />
+          <div className="container__body">
           <Switch>
             <Route exact path="/">
               <Home />
@@ -36,6 +49,8 @@ function App () {
                 404 Page not found
             </Route>
           </Switch>
+          <Footer />
+          </div>
         </div>
       </Router>
     );

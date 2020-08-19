@@ -11,17 +11,24 @@ module.exports = {
     rules: [
       { test: /\.(js)$/, use: "babel-loader" },
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
+      { test: /\.svg$/, use: ["@svgr/webpack"] },
+      { test: /\.(png|jp(e*)g|svg|gif)$/, use: [ { loader: 'file-loader', options: {
+              name: 'images/[hash]-[name].[ext]',
+            },
+          },
     ],
+  },
+],
   },
   mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
       template: "app/index.html",
-    })
+    }),
   ],
   devServer: {
-      historyApiFallback: true,
-      contentBase: './',
-      hot: true
-  }
-};
+    historyApiFallback: true,
+    contentBase: "./",
+    hot: true,
+  },
+}

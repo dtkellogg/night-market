@@ -1,18 +1,41 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --red: #e62424;
+  --purple: #a52ceb;
+  --blue: #2878e0;
+  --yellow: #f4f73e;
+  --pink: #e62ebe;
+  --gold: #fad104;
+  --aqua: #2febd2;
+  --gray: #23262e;
+}
+
+
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
     box-sizing: border-box;
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
 }
 
 li {
     list-style-type: none;
 }
 
-.container {
+.container__main {
     padding: 3rem;
+}
+
+.container__body {
+    padding: 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
 }
 
 /* FLEXBOX */
@@ -32,9 +55,34 @@ li {
 
 .nav-link {
     text-decoration: none;
-    color: white;
+    color: var(--white);
 }
 
 .nav li {
     margin-right: 10px;
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    /* margin: 0 2rem 0 0; */
+}
+
+/* TEAM */
+.team {
+    height: 100vh;
+}
+
+.window {
+    max-height: 100vh;
+}
+
+.sidebar-list {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  padding: 0;
 }
